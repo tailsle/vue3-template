@@ -1,0 +1,71 @@
+{
+	"name": "vue-template-plus",
+	"private": true,
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "vite",
+		"build": "vue-tsc --noEmit && vite build --mode production",
+		"preview": "vite preview",
+		"test": "jest",
+		"lint": "eslint --ext .js,.ts,.tsx src/ --fix",
+		"prettier": "prettier --write",
+		"prepare": "husky install",
+		"changelog": "conventional-changelog -p angular -i Changelog.md -s"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged",
+			"commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
+		}
+	},
+	"lint-staged": {
+		"**/*.ts": [
+			"eslint --fix",
+			"prettier --write",
+			"git add"
+		],
+		"src/**/*.scss": [
+			"stylelintscss",
+			"prettier --write",
+			"git add"
+		]
+	},
+	"dependencies": {
+		"autoprefixer": "^10.4.4",
+		"axios": "^0.26.1",
+		"element-plus": "^2.1.10",
+		"pinia": "^2.0.13",
+		"vue": "^3.2.25",
+		"vue-router": "^4.0.14"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.17.9",
+		"@babel/preset-env": "^7.16.11",
+		"@babel/preset-typescript": "^7.16.7",
+		"@commitlint/cli": "^16.2.3",
+		"@commitlint/config-conventional": "^16.2.1",
+		"@types/jest": "^27.4.1",
+		"@typescript-eslint/eslint-plugin": "^5.20.0",
+		"@typescript-eslint/parser": "^5.20.0",
+		"@vitejs/plugin-vue": "^2.3.1",
+		"babel-jest": "^27.5.1",
+		"conventional-changelog-cli": "^2.2.2",
+		"eslint": "^8.13.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-prettier": "^4.0.0",
+		"eslint-plugin-vue": "^8.6.0",
+		"husky": "^7.0.4",
+		"jest": "^27.5.1",
+		"lint-staged": "^12.4.0",
+		"postcss": "^8.4.12",
+		"postcss-flexbugs-fixes": "^5.0.2",
+		"prettier": "^2.6.2",
+		"stylelint": "^14.7.1",
+		"stylelint-config-standard": "^25.0.0",
+		"stylelint-config-standard-scss": "^3.0.0",
+		"stylelint-scss": "^4.2.0",
+		"typescript": "^4.5.4",
+		"vite": "^2.9.5",
+		"vue-tsc": "^0.34.7"
+	}
+}
