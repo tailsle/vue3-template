@@ -1,3 +1,12 @@
+## 0.0.2 (2022-05-06)
+
+
+### Features
+
+* 添加nprogress ([6db12e3](https://github.com/tailsle/vue3-template/commit/6db12e353b834e9d7a4b7ebeafb486a1effb9cca))
+
+
+
 # 0.0.1 (2022-04-21)
 
 ### Features

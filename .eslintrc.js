@@ -8,7 +8,7 @@ module.exports = {
 
 	plugins: ['vue', '@typescript-eslint', 'prettier'],
 	parserOptions: {
-		ecmaVersion: 12,
+		ecmaVersion: 2022,
 		parser: '@typescript-eslint/parser',
 		sourceType: 'module',
 	},
