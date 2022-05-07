@@ -1,10 +1,13 @@
+<template>
+	<n-config-provider :theme="appStore.theme">
+		<router-view />
+	</n-config-provider>
+</template>
 <script setup lang="ts">
-
+import useAppStore from '@/store/module/app';
+const appStore = useAppStore();
 </script>
 
-<template>
-	<router-view />
-</template>
 <style>
 @import 'nprogress/nprogress.css';
 #nprogress .bar {
