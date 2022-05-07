@@ -6,13 +6,15 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
 
 import { resolve } from 'path';
 
-// https://vitejs.dev/config/
 export default mode => {
 	const env = loadEnv(mode, process.cwd());
 	return defineConfig({
 		resolve: {
 			alias: {
 				'@': resolve(__dirname, 'src'),
+				api: resolve(__dirname, 'src/api'),
+				hook: resolve(__dirname, 'src/hook'),
+				comp: resolve(__dirname, 'src/components'),
 			},
 		},
 		server: {

@@ -15,7 +15,10 @@
 		"types": ["element-plus/global", "vite/client"],
 		"baseUrl": "./",
 		"paths": {
-			"@/*": ["./src/*"]
+			"@/*": ["./src/*"],
+			"api/*": ["./src/api/*"],
+			"hook/*": ["./src/hook/*"],
+			"comps/*": ["./src/components/*"],
 		}
 	},
 	"include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
