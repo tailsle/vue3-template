@@ -19,12 +19,12 @@
 		}
 	},
 	"lint-staged": {
-		"**/*.{ts,vue}": [
+		"*.{ts,tsx,vue,json,md}": [
 			"eslint --fix",
 			"prettier --write",
 			"git add"
 		],
-		"src/**/*.scss": [
+		"*.scss": [
 			"stylelintscss",
 			"prettier --write",
 			"git add"
