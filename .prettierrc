@@ -5,10 +5,10 @@
 	"arrowParens": "avoid",
 	"semi": true,
 	"singleQuote": true,
-	"quoteProps": "as-needed",
+	"quoteProps":"as-needed",
 	"bracketSpacing": true,
 	"jsxSingleQuote": true,
-	"trailingComma": "all",
+	"trailingComma": "none",
 	"bracketSameLine": true,
 	"endOfLine": "lf",
 	"embeddedLanguageFormatting": "auto"

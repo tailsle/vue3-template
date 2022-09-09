@@ -4,13 +4,13 @@ export default defineStore('user', {
 	state: () => {
 		return {
 			token: '',
-			age: 18,
+			age: 18
 		};
 	},
 	getters: {
 		getAge(): number {
 			return this.age;
-		},
+		}
 	},
 	actions: {
 		add() {
@@ -18,6 +18,6 @@ export default defineStore('user', {
 		},
 		sub() {
 			this.age--;
-		},
-	},
+		}
+	}
 });

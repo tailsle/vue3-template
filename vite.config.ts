@@ -3,10 +3,14 @@ import vue from '@vitejs/plugin-vue';
 import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
-
 import { resolve } from 'path';
 
-export default mode => {
+enum NodeEnv {
+	production = 'production',
+	development = 'development',
+	stage = 'stage'
+}
+export default (mode: NodeEnv) => {
 	const env = loadEnv(mode, process.cwd());
 	return defineConfig({
 		resolve: {
@@ -14,8 +18,8 @@ export default mode => {
 				'@': resolve(__dirname, 'src'),
 				api: resolve(__dirname, 'src/api'),
 				hook: resolve(__dirname, 'src/hook'),
-				comp: resolve(__dirname, 'src/components'),
-			},
+				comp: resolve(__dirname, 'src/components')
+			}
 		},
 		server: {
 			port: 3000,
@@ -26,9 +30,9 @@ export default mode => {
 				'/api': {
 					target: env.VITE_BASE_URL,
 					changeOrigin: true,
-					rewrite: path => path.replace(/^\/api/, ''),
-				},
-			},
+					rewrite: path => path.replace(/^\/api/, '')
+				}
+			}
 		},
 		plugins: [
 			vue(),
@@ -39,13 +43,13 @@ export default mode => {
 				eslintrc: {
 					enabled: true,
 					filepath: './.eslintrc-auto-import.json',
-					globalsPropValue: true,
+					globalsPropValue: true
 				},
-				dts: './auto-imports.d.ts',
+				dts: './auto-imports.d.ts'
 			}),
 			Components({
-				resolvers: [ElementPlusResolver()],
-			}),
-		],
+				resolvers: [ElementPlusResolver()]
+			})
+		]
 	});
 };

@@ -11,4 +11,9 @@ import useUserStore from '@/store/module/user';
 const userStore = useUserStore();
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.home {
+	width: 200px;
+	margin: 100px auto;
+}
+</style>
