@@ -22,5 +22,8 @@ module.exports = {
 	},
 	rules: {
 		'prettier/prettier': 'off',
+		indent: ['error', 4],
+		semi: ['error'],
+		'vue/multi-word-component-names':'off'
 	},
 };
