@@ -19,7 +19,7 @@
 		}
 	},
 	"lint-staged": {
-		"**/*.(ts,vue)": [
+		"**/*.{ts,vue}": [
 			"eslint --fix",
 			"prettier --write",
 			"git add"
