@@ -4,25 +4,25 @@ module.exports = {
 		'eslint:recommended',
 		'plugin:vue/vue3-recommended',
 		'plugin:prettier/recommended',
-		'./.eslintrc-auto-import.json',
+		'./.eslintrc-auto-import.json'
 	],
 
 	plugins: ['vue', '@typescript-eslint', 'prettier'],
 	parserOptions: {
 		ecmaVersion: 2022,
 		parser: '@typescript-eslint/parser',
-		sourceType: 'module',
+		sourceType: 'module'
 	},
 	env: {
 		browser: true,
 		es2021: true,
 		commonjs: true,
 		es6: true,
-		node: true,
+		node: true
 	},
 	rules: {
 		'prettier/prettier': 'off',
-		'vue/multi-word-component-names':'off',
-		'no-unused-vars':'off'
-	},
+		'vue/multi-word-component-names': 'off',
+		'no-unused-vars': 'off'
+	}
 };

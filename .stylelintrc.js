@@ -1,6 +1,6 @@
 module.exports = {
 	extends: 'stylelint-config-standard-scss',
 	rules: {
-		indentation: 4,
-	},
+		indentation: 4
+	}
 };
