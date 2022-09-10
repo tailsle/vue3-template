@@ -1,7 +1,7 @@
 {
 	"name": "vue-template-plus",
 	"private": true,
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"scripts": {
 		"dev": "vite",
 		"build": "vue-tsc --noEmit && vite build --mode production",
@@ -19,7 +19,7 @@
 		}
 	},
 	"lint-staged": {
-		"*.{ts,tsx,vue,json,md}": [
+		"*.{js,ts,tsx,vue,json,md}": [
 			"eslint --fix",
 			"prettier --write",
 			"git add"

@@ -1,6 +1,7 @@
 dist
 build
 coverage
+node_modules/
 *.html
 *.json
 *.yaml
